@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <% include ../partials/header.ejs %>
-</head>
-
-<body>
-
-  <% include ../partials/nav.ejs %>
-
-<center>I am Songwen Su.</center>
-
-
-</body>
+   <h2>Winery Classification</h2>
+   <form method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+      <p>
+         <label>Fixed acidity
+         <input type="text" name="fixed_acidity" required>
+         </label> 
+      </p>
+      <p>
+         <label>Volatile acidity 
+         <input type="text" name="volatile_acidity"required>
+         </label>
+      </p>
+      <p>
+         <label>Citric acid 
+         <input type="email" name="citric_acid"required>
+         </label>
+      </p>
+      <p>
+         <label>Residual sugar
+         <input type="text" name="residual_sugar" required>
+         </label> 
+      </p>
+      <p>
+         <label>Chlorides
+         <input type="text" name="chlorides" required>
+         </label> 
+      </p>
+      <p>
+         <label>Free sulfur dioxide
+         <input type="text" name="free_sulfur_dioxide" required>
+         </label> 
+      </p>
+      <p>
+         <label>Total sulfur dioxide
+         <input type="text" name="total_sulfur_dioxide" required>
+         </label> 
+      </p>
+      <p>
+         <label>Density
+         <input type="text" name="density" required>
+         </label> 
+      </p>
+      <p>
+         <label>pH
+         <input type="text" name="ph" required>
+         </label> 
+      </p>
+      <p>
+         <label>Sulphates
+         <input type="text" name="sulphates" required>
+         </label> 
+      </p>
+      <p>
+         <label>Alcohol
+         <input type="text" name="alcohol" required>
+         </label> 
+      </p>
+     
+      <p><button>Submit Booking</button></p>
+   </form>
 </html>
