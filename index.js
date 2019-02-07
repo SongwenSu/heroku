@@ -4,14 +4,14 @@ const PORT = process.env.PORT || 5000
 var app = express();
 var myParser = require('body-parser')
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
+app.get('/', (req, res) => res.render('pages/index'))
 app.use(myParser.urlencoded({extended : true}));
 app.post('/page-submitted', function(req, res) {
   console.log(req.body) 
 }
+         
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+
