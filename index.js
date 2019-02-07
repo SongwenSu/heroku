@@ -15,7 +15,6 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 app.get('/', (req, res) => res.render('pages/index'))
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
-app.post('/form-submitted', function(req,res) {
-  console.log(req.body);
+app.post('/form-submitted', (req, res) => res.render('pages/page_submitted'))
 });
 
