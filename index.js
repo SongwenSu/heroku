@@ -4,10 +4,11 @@ const PORT = process.env.PORT || 5000
 var app = express();
 var myParser = require('body-parser')
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 app.get('/', (req, res) => res.render('pages/index'))
-app.use(myParser.urlencoded({extended : true}));
+//app.use(myParser.urlencoded({extended : true}));
 app.post('/page-submitted', function(req, res) {
   console.log(req.body) 
 }
